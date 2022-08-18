@@ -4,7 +4,7 @@ namespace Modules\Manufacturer\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Routing\Controller;
-use Modules\Manufacturer\DataTables\BackupDataTable;
+use Modules\Manufacturer\DataTables\ManufacturerDataTable;
 use Modules\Manufacturer\Http\Requests\StoreManufacturerRequest;
 use Modules\Manufacturer\Http\Requests\UpdateManufacturerRequest;
 
@@ -18,7 +18,7 @@ class ManufacturerController extends Controller
         $this->middleware('permission:manufacturer-delete')->only('destroy');
     }
 
-    public function index(BackupDataTable $dataTable)
+    public function index(ManufacturerDataTable $dataTable)
     {
         return $dataTable->render('manufacturer::index');
     }
