@@ -7,10 +7,10 @@
         <div class="col-md-12 col-md-12">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h4>@lang('Add Manufacturer')</h4>
+                    <h4>{{ __("Add Manufacturer") }}</h4>
                     <div class="card-header-action">
                         <a href="{{ route('admin.manufacturer.index') }}" class="btn btn-primary">
-                            <i class="fas fa-align-justify"></i> @lang('Manufacturer List')
+                            <i class="fas fa-align-justify"></i> {{ __("Manufacturer List") }}
                         </a>
                     </div>
                 </div>
@@ -19,63 +19,63 @@
                         @csrf
                         <div class="row">
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="manufacturer_name" class="mb-0 required">@lang('Manufacturer Name')</label>
-                                <input type="text" name="manufacturer_name" class="form-control" id="manufacturer_name" placeholder="@lang('Manufacturer Name')" required>
+                                <label for="manufacturer_name" class="mb-0 required">{{ __("Manufacturer Name") }}</label>
+                                <input type="text" name="manufacturer_name" class="form-control" id="manufacturer_name" placeholder="{{ __("Manufacturer Name") }}" required>
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="manufacturer_mobile" class="mb-0 required">@lang('Mobile No') </label>
-                                <input type="tel" name="manufacturer_mobile" class="form-control" id="manufacturer_mobile" placeholder="@lang('Mobile No')" required>
+                                <label for="manufacturer_mobile" class="mb-0 required">{{ __("Mobile No") }} </label>
+                                <input type="tel" name="manufacturer_mobile" class="form-control" id="manufacturer_mobile" placeholder="{{ __("Mobile No") }}" required>
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="manufacturer_email" class="mb-0 required">@lang('Email Address1')</label>
-                                <input type="email" class="form-control" name="manufacturer_email" id="email" placeholder="Email" required>
+                                <label for="manufacturer_email" class="mb-0 required">{{ __("Email Address1") }}</label>
+                                <input type="email" class="form-control" name="manufacturer_email" id="email" placeholder="{{ __('Email') }}" required>
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="secondary_email" class="mb-0">@lang('Secondary Email Address')</label>
-                                <input type="email" class="form-control" name="secondary_email" id="secondary_email" placeholder="@lang('Email Address')">
+                                <label for="secondary_email" class="mb-0">{{ __("Secondary Email Address") }}</label>
+                                <input type="email" class="form-control" name="secondary_email" id="secondary_email" placeholder="{{ __("Email Address") }}">
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="phone" class="mb-0">@lang('Phone')</label>
-                                <input class="form-control" id="phone" type="tel" name="phone" placeholder="@lang('Phone')">
+                                <label for="phone" class="mb-0">{{ __("Phone") }}</label>
+                                <input class="form-control" id="phone" type="tel" name="phone" placeholder="{{ __("Phone") }}">
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="contact" class="mb-0">@lang('Contact')</label>
-                                <input class="form-control" id="contact" type="text" name="contact" placeholder="@lang('Contact')">
+                                <label for="contact" class="mb-0">{{ __("Contact") }}</label>
+                                <input class="form-control" id="contact" type="text" name="contact" placeholder="{{ __("Contact") }}">
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="fax" class="mb-0">@lang('Fax')</label>
-                                <input type="text" name="fax" class="form-control" id="fax" placeholder="@lang('Fax')">
+                                <label for="fax" class="mb-0">{{ __("Fax") }}</label>
+                                <input type="text" name="fax" class="form-control" id="fax" placeholder="{{ __("Fax") }}">
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="city" class="mb-0">@lang('City')</label>
-                                <input type="text" name="city" class="form-control" id="city" placeholder="@lang('City')">
+                                <label for="city" class="mb-0">{{ __("City") }}</label>
+                                <input type="text" name="city" class="form-control" id="city" placeholder="{{ __("City") }}">
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="state" class="mb-0">@lang('State')</label>
-                                <input type="text" name="state" class="form-control" id="state" placeholder="@lang('State')">
+                                <label for="state" class="mb-0">{{ __("State") }}</label>
+                                <input type="text" name="state" class="form-control" id="state" placeholder="{{ __("State") }}">
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="zip" class="mb-0">@lang('Zip')</label>
-                                <input name="zip" type="text" class="form-control" id="zip" placeholder="@lang('Zip')">
+                                <label for="zip" class="mb-0">{{ __("Zip") }}</label>
+                                <input name="zip" type="text" class="form-control" id="zip" placeholder="{{ __("Zip") }}">
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="country" class="mb-0">@lang('Country')</label>
-                                <input name="country" type="text" class="form-control" placeholder="@lang('Country')" id="country">
+                                <label for="country" class="mb-0">{{ __("Country") }}</label>
+                                <input name="country" type="text" class="form-control" placeholder="{{ __("Country") }}" id="country">
                             </div>
                             <div class="col-sm-6 col-md-4 mb-3">
-                                <label for="previous_balance" class="mb-0">@lang('Previous Balance')</label>
-                                <input name="previous_balance" type="number" class="form-control" placeholder="Previous Balance" step="any">
+                                <label for="previous_balance" class="mb-0">{{ __("Previous Balance") }}</label>
+                                <input name="previous_balance" type="number" class="form-control" placeholder="{{ __("Previous Balance") }}" step="any">
                             </div>
                             <div class="col-sm-6">
-                                <label for="address1" class="mb-0">@lang('Address 1')</label>
-                                <textarea name="address_1" id="address1" class="form-control" placeholder="@lang('Address 1')"></textarea>
+                                <label for="address1" class="mb-0">{{ __("Address 1") }}</label>
+                                <textarea name="address_1" id="address1" class="form-control" placeholder="{{ __("Address 1") }}"></textarea>
                             </div>
                             <div class="col-sm-6">
-                                <label for="address2" class="mb-0">@lang('Address 2')</label>
-                                <textarea name="address_2" id="address2" class="form-control" placeholder="@lang('Address 2')"></textarea>
+                                <label for="address2" class="mb-0">{{ __("Address 2") }}</label>
+                                <textarea name="address_2" id="address2" class="form-control" placeholder="{{ __("Address 2") }}"></textarea>
                             </div>
                             <div class="col-12 mt-4 text-right">
-                                <button type="submit" class="btn btn-primary submit-button"><i class="fas fa-save"></i> @lang('Save')</button>
+                                <button type="submit" class="btn btn-primary submit-button"><i class="fas fa-save"></i> {{ __("Save") }}</button>
                             </div>
                         </div>
                     </form>
