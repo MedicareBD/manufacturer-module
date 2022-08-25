@@ -15,7 +15,7 @@ class ManufacturerDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addIndexColumn()
-            ->editColumn('created_at', fn($model) => format_date($model->created_at))
+            ->editColumn('created_at', fn ($model) => format_date($model->created_at))
             ->addColumn('action', 'manufacturer::action')
             ->setRowId('id');
     }
@@ -51,15 +51,15 @@ class ManufacturerDataTable extends DataTable
                 ->exportable(false)
                 ->orderable(false)
                 ->title('#'),
-            Column::make('name')->title(__("Manufacturer Name")),
-            Column::make('address')->title(__("Address 1")),
-            Column::make('mobile')->title(__("Mobile")),
-            Column::make('email')->title(__("Email")),
-            Column::make('city')->title(__("City")),
-            Column::make('state')->title(__("State")),
-            Column::make('zip')->title(__("ZIP")),
-            Column::make('country')->title(__("Country")),
-            Column::make('created_at')->title(__("Created At")),
+            Column::make('name')->title(__('Manufacturer Name')),
+            Column::make('address')->title(__('Address 1')),
+            Column::make('mobile')->title(__('Mobile')),
+            Column::make('email')->title(__('Email')),
+            Column::make('city')->title(__('City')),
+            Column::make('state')->title(__('State')),
+            Column::make('zip')->title(__('ZIP')),
+            Column::make('country')->title(__('Country')),
+            Column::make('created_at')->title(__('Created At')),
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
@@ -72,6 +72,6 @@ class ManufacturerDataTable extends DataTable
 
     protected function filename(): string
     {
-        return 'Customers_' . date('YmdHis');
+        return 'Customers_'.date('YmdHis');
     }
 }

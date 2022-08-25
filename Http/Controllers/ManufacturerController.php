@@ -34,7 +34,7 @@ class ManufacturerController extends Controller
         $manufacturer = User::create([
             'name' => $validated['manufacturer_name'],
             'email' => $validated['manufacturer_email'],
-            'password'=> bcrypt('password'),
+            'password' => bcrypt('password'),
             'avatar' => 'https://avatars.dicebear.com/api/adventurer/'.str($validated['manufacturer_name'])->slug().'.svg',
             'mobile' => $validated['manufacturer_mobile'],
             'phone' => $validated['phone'],
@@ -54,7 +54,7 @@ class ManufacturerController extends Controller
 
         return response()->json([
             'message' => __('Manufacturer Created Successfully'),
-            'redirect' => route('admin.manufacturer.index')
+            'redirect' => route('admin.manufacturer.index'),
         ]);
     }
 
@@ -90,15 +90,15 @@ class ManufacturerController extends Controller
 
         return response()->json([
             'message' => __('Manufacturer Updated Successfully'),
-            'redirect' => route('admin.manufacturer.index')
+            'redirect' => route('admin.manufacturer.index'),
         ]);
     }
 
     public function destroy(User $manufacturer)
     {
-        if (!$manufacturer->hasRole('Manufacturer')){
+        if (! $manufacturer->hasRole('Manufacturer')) {
             return response()->json([
-                'message' => __("This user is not a valid manufacturer")
+                'message' => __('This user is not a valid manufacturer'),
             ], 403);
         }
 
@@ -106,7 +106,7 @@ class ManufacturerController extends Controller
 
         return response()->json([
             'message' => __('Manufacturer Deleted Successfully'),
-            'redirect' => route('admin.manufacturer.index')
+            'redirect' => route('admin.manufacturer.index'),
         ]);
     }
 }
